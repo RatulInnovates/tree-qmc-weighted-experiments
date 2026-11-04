@@ -1,0 +1,376 @@
+g++.exe (Rev6, Built by MSYS2 project) 16.2.0
+GNU Make 4.4.1
+g++ -c -MD -Iinclude -std=c++0x -O2 -Wall -D_USE_MATH_DEFINES -o .build/heuristics/base_solution.o src/heuristics/base_solution.cpp
+g++ -c -MD -Iinclude -std=c++0x -O2 -Wall -D_USE_MATH_DEFINES -o .build/heuristics/extended_solution.o src/heuristics/extended_solution.cpp
+g++ -c -MD -Iinclude -std=c++0x -O2 -Wall -D_USE_MATH_DEFINES -o .build/heuristics/heuristic_factory.o src/heuristics/heuristic_factory.cpp
+src/heuristics/heuristic_factory.cpp: In member function 'void HeuristicFactory::PrintHeuristicCodes()':
+src/heuristics/heuristic_factory.cpp:202:19: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<std::__cxx11::basic_string<char> >::size_type' {aka 'long long unsigned int'} [-Wsign-compare]
+  202 |   for (int i=0; i < max_cut_names.size(); ++i) {
+      |                 ~~^~~~~~~~~~~~~~~~~~~~~~
+src/heuristics/heuristic_factory.cpp:215:19: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<std::__cxx11::basic_string<char> >::size_type' {aka 'long long unsigned int'} [-Wsign-compare]
+  215 |   for (int i=0; i < qubo_names.size(); ++i) {
+      |                 ~~^~~~~~~~~~~~~~~~~~~
+g++ -c -MD -Iinclude -std=c++0x -O2 -Wall -D_USE_MATH_DEFINES -o .build/heuristics/maxcut/baseline.o src/heuristics/maxcut/baseline.cpp
+g++ -c -MD -Iinclude -std=c++0x -O2 -Wall -D_USE_MATH_DEFINES -o .build/heuristics/maxcut/burer2002.o src/heuristics/maxcut/burer2002.cpp
+g++ -c -MD -Iinclude -std=c++0x -O2 -Wall -D_USE_MATH_DEFINES -o .build/heuristics/maxcut/deSousa2013.o src/heuristics/maxcut/deSousa2013.cpp
+g++ -c -MD -Iinclude -std=c++0x -O2 -Wall -D_USE_MATH_DEFINES -o .build/heuristics/maxcut/duarte2005.o src/heuristics/maxcut/duarte2005.cpp
+src/heuristics/maxcut/duarte2005.cpp: In constructor 'Duarte2005::Duarte2005(const MaxCutInstance&, double, bool, MaxCutCallback*)':
+src/heuristics/maxcut/duarte2005.cpp:177:29: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<Duarte2005Solution>::size_type' {aka 'long long unsigned int'} [-Wsign-compare]
+  177 |       for (int sol = 0; sol < population.size(); sol++) {
+      |                         ~~~~^~~~~~~~~~~~~~~~~~~
+src/heuristics/maxcut/duarte2005.cpp:192:29: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<Duarte2005Solution>::size_type' {aka 'long long unsigned int'} [-Wsign-compare]
+  192 |       for (int sol = 0; sol < next_population.size(); sol++)
+      |                         ~~~~^~~~~~~~~~~~~~~~~~~~~~~~
+g++ -c -MD -Iinclude -std=c++0x -O2 -Wall -D_USE_MATH_DEFINES -o .build/heuristics/maxcut/festa2002.o src/heuristics/maxcut/festa2002.cpp
+src/heuristics/maxcut/festa2002.cpp: In constructor 'Festa2002Solution::Festa2002Solution(const MaxCutInstance&, const Festa2002Solution&, const Festa2002Solution&, MaxCutHeuristic*)':
+src/heuristics/maxcut/festa2002.cpp:109:21: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<int>::size_type' {aka 'long long unsigned int'} [-Wsign-compare]
+  109 |     for (int i=1; i < diff.size(); ++i) {
+      |                   ~~^~~~~~~~~~~~~
+src/heuristics/maxcut/festa2002.cpp:139:21: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<int>::size_type' {aka 'long long unsigned int'} [-Wsign-compare]
+  139 |     for (int i=0; i < S_.size(); ++i) {
+      |                   ~~^~~~~~~~~~~
+src/heuristics/maxcut/festa2002.cpp:146:21: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<int>::size_type' {aka 'long long unsigned int'} [-Wsign-compare]
+  146 |     for (int i=0; i < Sbar_.size(); ++i) {
+      |                   ~~^~~~~~~~~~~~~~
+src/heuristics/maxcut/festa2002.cpp: In constructor 'Festa2002Solution::Festa2002Solution(const MaxCutInstance&, const Festa2002Solution&, int, MaxCutHeuristic*)':
+src/heuristics/maxcut/festa2002.cpp:186:19: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<int>::size_type' {aka 'long long unsigned int'} [-Wsign-compare]
+  186 |   for (int i=0; i < S_.size(); ++i) {
+      |                 ~~^~~~~~~~~~~
+src/heuristics/maxcut/festa2002.cpp:191:19: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<int>::size_type' {aka 'long long unsigned int'} [-Wsign-compare]
+  191 |   for (int i=0; i < Sbar_.size(); ++i) {
+      |                 ~~^~~~~~~~~~~~~~
+src/heuristics/maxcut/festa2002.cpp: In member function 'void Festa2002Solution::LocalSearch()':
+src/heuristics/maxcut/festa2002.cpp:261:17: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<int>::size_type' {aka 'long long unsigned int'} [-Wsign-compare]
+  261 |     while (Spos < S_.size() || Sbarpos < Sbar_.size()) {
+      |            ~~~~~^~~~~~~~~~~
+src/heuristics/maxcut/festa2002.cpp:261:40: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<int>::size_type' {aka 'long long unsigned int'} [-Wsign-compare]
+  261 |     while (Spos < S_.size() || Sbarpos < Sbar_.size()) {
+      |                                ~~~~~~~~^~~~~~~~~~~~~~
+src/heuristics/maxcut/festa2002.cpp:262:16: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<int>::size_type' {aka 'long long unsigned int'} [-Wsign-compare]
+  262 |       if (Spos < S_.size()) {
+      |           ~~~~~^~~~~~~~~~~
+src/heuristics/maxcut/festa2002.cpp:273:19: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<int>::size_type' {aka 'long long unsigned int'} [-Wsign-compare]
+  273 |       if (Sbarpos < Sbar_.size()) {
+      |           ~~~~~~~~^~~~~~~~~~~~~~
+src/heuristics/maxcut/festa2002.cpp:288:21: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<int>::size_type' {aka 'long long unsigned int'} [-Wsign-compare]
+  288 |         if (Sbarpos < Sbar_.size()) {
+      |             ~~~~~~~~^~~~~~~~~~~~~~
+src/heuristics/maxcut/festa2002.cpp:301:18: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<int>::size_type' {aka 'long long unsigned int'} [-Wsign-compare]
+  301 |         if (Spos < S_.size()) {
+      |             ~~~~~^~~~~~~~~~~
+src/heuristics/maxcut/festa2002.cpp:314:18: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<int>::size_type' {aka 'long long unsigned int'} [-Wsign-compare]
+  314 |         if (Spos < S_.size()) {
+      |             ~~~~~^~~~~~~~~~~
+src/heuristics/maxcut/festa2002.cpp:325:21: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<int>::size_type' {aka 'long long unsigned int'} [-Wsign-compare]
+  325 |         if (Sbarpos < Sbar_.size()) {
+      |             ~~~~~~~~^~~~~~~~~~~~~~
+src/heuristics/maxcut/festa2002.cpp: In constructor 'Festa2002Heuristic::Festa2002Heuristic(const MaxCutInstance&, double, bool, MaxCutCallback*, bool, bool, bool)':
+src/heuristics/maxcut/festa2002.cpp:421:26: warning: comparison of integer expressions of different signedness: 'std::vector<Festa2002Solution>::size_type' {aka 'long long unsigned int'} and 'int' [-Wsign-compare]
+  421 |         if (elite.size() < MaxElite) {
+      |             ~~~~~~~~~~~~~^~~~~~~~~~
+g++ -c -MD -Iinclude -std=c++0x -O2 -Wall -D_USE_MATH_DEFINES -o .build/heuristics/maxcut/hyperheuristic.o src/heuristics/maxcut/hyperheuristic.cpp
+src/heuristics/maxcut/hyperheuristic.cpp: In constructor 'MaxCutHyperheuristic::MaxCutHyperheuristic(const MaxCutInstance&, double, bool, MaxCutCallback*, int, std::string*)':
+src/heuristics/maxcut/hyperheuristic.cpp:114:19: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<std::__cxx11::basic_string<char> >::size_type' {aka 'long long unsigned int'} [-Wsign-compare]
+  114 |   for (int i=0; i < codes.size(); ++i) {
+      |                 ~~^~~~~~~~~~~~~~
+src/heuristics/maxcut/hyperheuristic.cpp:121:19: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<std::__cxx11::basic_string<char> >::size_type' {aka 'long long unsigned int'} [-Wsign-compare]
+  121 |   for (int i=0; i < codes.size(); ++i) {
+      |                 ~~^~~~~~~~~~~~~~
+g++ -c -MD -Iinclude -std=c++0x -O2 -Wall -D_USE_MATH_DEFINES -o .build/heuristics/maxcut/laguna2009.o src/heuristics/maxcut/laguna2009.cpp
+src/heuristics/maxcut/laguna2009.cpp: In constructor 'Laguna2009CE::Laguna2009CE(const MaxCutInstance&, double, bool, MaxCutCallback*)':
+src/heuristics/maxcut/laguna2009.cpp:75:23: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<MaxCutSolution>::size_type' {aka 'long long unsigned int'} [-Wsign-compare]
+   75 |       for (int j=1; j < X.size(); ++j) {
+      |                     ~~^~~~~~~~~~
+src/heuristics/maxcut/laguna2009.cpp: In member function 'void Laguna2009HCE::LocallyOptimize(std::vector<FirstFixedMaxCutSolution>*)':
+src/heuristics/maxcut/laguna2009.cpp:103:23: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<FirstFixedMaxCutSolution>::size_type' {aka 'long long unsigned int'} [-Wsign-compare]
+  103 |   for (int idx=1; idx < X->size(); ++idx) {
+      |                   ~~~~^~~~~~~~~~~
+src/heuristics/maxcut/laguna2009.cpp:114:19: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<FirstFixedMaxCutSolution>::size_type' {aka 'long long unsigned int'} [-Wsign-compare]
+  114 |   for (int i=0; i < X->size(); ++i) {
+      |                 ~~^~~~~~~~~~~
+src/heuristics/maxcut/laguna2009.cpp:125:21: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<FirstFixedMaxCutSolution>::size_type' {aka 'long long unsigned int'} [-Wsign-compare]
+  125 |     for (int i=0; i < X->size(); ++i) {
+      |                   ~~^~~~~~~~~~~
+src/heuristics/maxcut/laguna2009.cpp:138:23: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<FirstFixedMaxCutSolution>::size_type' {aka 'long long unsigned int'} [-Wsign-compare]
+  138 |       for (int i=0; i < X->size(); ++i) {
+      |                     ~~^~~~~~~~~~~
+src/heuristics/maxcut/laguna2009.cpp: In constructor 'Laguna2009HCE::Laguna2009HCE(const MaxCutInstance&, double, bool, MaxCutCallback*)':
+src/heuristics/maxcut/laguna2009.cpp:164:23: warning: comparison of integer expressions of different signedness: 'std::vector<FirstFixedMaxCutSolution>::size_type' {aka 'long long unsigned int'} and 'int' [-Wsign-compare]
+  164 |       while (X.size() < N) {
+      |              ~~~~~~~~~^~~
+src/heuristics/maxcut/laguna2009.cpp:183:27: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<FirstFixedMaxCutSolution>::size_type' {aka 'long long unsigned int'} [-Wsign-compare]
+  183 |       for (int idx=1; idx < X.size(); ++idx) {
+      |                       ~~~~^~~~~~~~~~
+g++ -c -MD -Iinclude -std=c++0x -O2 -Wall -D_USE_MATH_DEFINES -o .build/heuristics/maxcut/max_cut_partial_solution.o src/heuristics/maxcut/max_cut_partial_solution.cpp
+g++ -c -MD -Iinclude -std=c++0x -O2 -Wall -D_USE_MATH_DEFINES -o .build/heuristics/maxcut/max_cut_simple_solution.o src/heuristics/maxcut/max_cut_simple_solution.cpp
+src/heuristics/maxcut/max_cut_simple_solution.cpp: In constructor 'MaxCutSimpleSolution::MaxCutSimpleSolution(const QUBOSimpleSolution&, const MaxCutInstance&, MaxCutHeuristic*)':
+src/heuristics/maxcut/max_cut_simple_solution.cpp:70:31: warning: comparison of integer expressions of different signedness: 'std::vector<int>::size_type' {aka 'long long unsigned int'} and 'int' [-Wsign-compare]
+   70 |   if (qubo_assignments.size() != N_) {
+      |       ~~~~~~~~~~~~~~~~~~~~~~~~^~~~~
+g++ -c -MD -Iinclude -std=c++0x -O2 -Wall -D_USE_MATH_DEFINES -o .build/heuristics/maxcut/max_cut_solution.o src/heuristics/maxcut/max_cut_solution.cpp
+g++ -c -MD -Iinclude -std=c++0x -O2 -Wall -D_USE_MATH_DEFINES -o .build/heuristics/qubo/alkhamis1998.o src/heuristics/qubo/alkhamis1998.cpp
+src/heuristics/qubo/alkhamis1998.cpp: In constructor 'Alkhamis1998::Alkhamis1998(const QUBOInstance&, double, bool, QUBOCallback*)':
+src/heuristics/qubo/alkhamis1998.cpp:85:21: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<double>::size_type' {aka 'long long unsigned int'} [-Wsign-compare]
+   85 |     for (int i=0; i < diff_weights.size(); ++i) {
+      |                   ~~^~~~~~~~~~~~~~~~~~~~~
+g++ -c -MD -Iinclude -std=c++0x -O2 -Wall -D_USE_MATH_DEFINES -o .build/heuristics/qubo/beasley1998.o src/heuristics/qubo/beasley1998.cpp
+g++ -c -MD -Iinclude -std=c++0x -O2 -Wall -D_USE_MATH_DEFINES -o .build/heuristics/qubo/glover1998a.o src/heuristics/qubo/glover1998a.cpp
+g++ -c -MD -Iinclude -std=c++0x -O2 -Wall -D_USE_MATH_DEFINES -o .build/heuristics/qubo/glover2010.o src/heuristics/qubo/glover2010.cpp
+src/heuristics/qubo/glover2010.cpp: In constructor 'Glover2010QUBOSolution::Glover2010QUBOSolution(const Glover2010QUBOSolution&, const std::vector<int>&, int, const std::vector<int>&)':
+src/heuristics/qubo/glover2010.cpp:54:23: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<int>::size_type' {aka 'long long unsigned int'} [-Wsign-compare]
+   54 |   for (int idx=0; idx < flips.size(); ++idx) {
+      |                   ~~~~^~~~~~~~~~~~~~
+src/heuristics/qubo/glover2010.cpp: In member function 'void Glover2010Elite::AddSolution(const Glover2010QUBOSolution&)':
+src/heuristics/qubo/glover2010.cpp:125:24: warning: comparison of integer expressions of different signedness: 'std::vector<Glover2010QUBOSolution>::size_type' {aka 'long long unsigned int'} and 'int' [-Wsign-compare]
+  125 |   if (EliteSol_.size() == R_ && !x.ImprovesOver(EliteSol_[0])) {
+      |       ~~~~~~~~~~~~~~~~~^~~~~
+src/heuristics/qubo/glover2010.cpp:130:23: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<Glover2010QUBOSolution>::size_type' {aka 'long long unsigned int'} [-Wsign-compare]
+  130 |   for (int idx=0; idx < EliteSol_.size(); ++idx) {
+      |                   ~~~~^~~~~~~~~~~~~~~~~~
+src/heuristics/qubo/glover2010.cpp:141:24: warning: comparison of integer expressions of different signedness: 'std::vector<Glover2010QUBOSolution>::size_type' {aka 'long long unsigned int'} and 'int' [-Wsign-compare]
+  141 |   if (EliteSol_.size() == R_) {
+      |       ~~~~~~~~~~~~~~~~~^~~~~
+g++ -c -MD -Iinclude -std=c++0x -O2 -Wall -D_USE_MATH_DEFINES -o .build/heuristics/qubo/hasan2000.o src/heuristics/qubo/hasan2000.cpp
+src/heuristics/qubo/hasan2000.cpp: In constructor 'Hasan2000GA::Hasan2000GA(const QUBOInstance&, double, bool, QUBOCallback*)':
+src/heuristics/qubo/hasan2000.cpp:115:23: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<Hasan2000Solution>::size_type' {aka 'long long unsigned int'} [-Wsign-compare]
+  115 |       for (int i=0; i < children.size(); ++i) {
+      |                     ~~^~~~~~~~~~~~~~~~~
+src/heuristics/qubo/hasan2000.cpp:123:23: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<Hasan2000Solution>::size_type' {aka 'long long unsigned int'} [-Wsign-compare]
+  123 |       for (int i=0; i < children.size(); ++i) {
+      |                     ~~^~~~~~~~~~~~~~~~~
+g++ -c -MD -Iinclude -std=c++0x -O2 -Wall -D_USE_MATH_DEFINES -o .build/heuristics/qubo/katayama2000.o src/heuristics/qubo/katayama2000.cpp
+src/heuristics/qubo/katayama2000.cpp: In member function 'void Katayama2000Elite::Update(const std::vector<Katayama2000QUBOSolution>&)':
+src/heuristics/qubo/katayama2000.cpp:170:19: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<Katayama2000QUBOSolution>::size_type' {aka 'long long unsigned int'} [-Wsign-compare]
+  170 |   for (int i=0; i < combined.size(); ++i) {
+      |                 ~~^~~~~~~~~~~~~~~~~
+src/heuristics/qubo/katayama2000.cpp:173:21: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<Katayama2000QUBOSolution>::size_type' {aka 'long long unsigned int'} [-Wsign-compare]
+  173 |     for (int j=0; j < P_.size(); ++j) {
+      |                   ~~^~~~~~~~~~~
+src/heuristics/qubo/katayama2000.cpp:184:19: warning: comparison of integer expressions of different signedness: 'std::vector<Katayama2000QUBOSolution>::size_type' {aka 'long long unsigned int'} and 'int' [-Wsign-compare]
+  184 |     if (P_.size() == PS_) {
+      |         ~~~~~~~~~~^~~~~~
+src/heuristics/qubo/katayama2000.cpp: In member function 'void Katayama2000Elite::Diversify()':
+src/heuristics/qubo/katayama2000.cpp:208:21: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<Katayama2000QUBOSolution>::size_type' {aka 'long long unsigned int'} [-Wsign-compare]
+  208 |     for (int i=0; i < P_.size(); ++i) {
+      |                   ~~^~~~~~~~~~~
+src/heuristics/qubo/katayama2000.cpp:209:27: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<Katayama2000QUBOSolution>::size_type' {aka 'long long unsigned int'} [-Wsign-compare]
+  209 |       for (int j = i+1; j < P_.size(); ++j) {
+      |                         ~~^~~~~~~~~~~
+src/heuristics/qubo/katayama2000.cpp:226:21: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<Katayama2000QUBOSolution>::size_type' {aka 'long long unsigned int'} [-Wsign-compare]
+  226 |     for (int i=1; i < P_.size(); ++i) {
+      |                   ~~^~~~~~~~~~~
+g++ -c -MD -Iinclude -std=c++0x -O2 -Wall -D_USE_MATH_DEFINES -o .build/heuristics/qubo/katayama2001.o src/heuristics/qubo/katayama2001.cpp
+g++ -c -MD -Iinclude -std=c++0x -O2 -Wall -D_USE_MATH_DEFINES -o .build/heuristics/qubo/lodi1999.o src/heuristics/qubo/lodi1999.cpp
+src/heuristics/qubo/lodi1999.cpp: In member function 'void Lodi1999MinRange::MinRangeInternal(std::vector<int>*, std::vector<double>*, std::vector<double>*, ExtendedSolution*) const':
+src/heuristics/qubo/lodi1999.cpp:47:19: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<int>::size_type' {aka 'long long unsigned int'} [-Wsign-compare]
+   47 |   for (int i=0; i < fixed->size(); ++i) {
+      |                 ~~^~~~~~~~~~~~~~~
+src/heuristics/qubo/lodi1999.cpp: In constructor 'Lodi1999::Lodi1999(const QUBOInstance&, double, bool, QUBOCallback*)':
+src/heuristics/qubo/lodi1999.cpp:272:23: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<Lodi1999Solution>::size_type' {aka 'long long unsigned int'} [-Wsign-compare]
+  272 |     for (int p = 0; p < SIZEmin - best_of_restarts.size(); p++) {
+      |                     ~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/heuristics/qubo/lodi1999.cpp:276:23: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<Lodi1999Solution>::size_type' {aka 'long long unsigned int'} [-Wsign-compare]
+  276 |     for (int p = 0; p < best_of_restarts.size(); p++) {
+      |                     ~~^~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from src/heuristics/qubo/lodi1999.cpp:4:
+src/heuristics/qubo/lodi1999.cpp:305:19: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<Lodi1999Solution>::size_type' {aka 'long long unsigned int'} [-Wsign-compare]
+  305 |       assert(P1-1 < population.size());
+      |              ~~~~~^~~~~~~~~~~~~~~~~~~
+src/heuristics/qubo/lodi1999.cpp:306:19: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<Lodi1999Solution>::size_type' {aka 'long long unsigned int'} [-Wsign-compare]
+  306 |       assert(P2-1 < population.size());
+      |              ~~~~~^~~~~~~~~~~~~~~~~~~
+src/heuristics/qubo/lodi1999.cpp:261:7: warning: variable 'num_cf' set but not used [-Wunused-but-set-variable=]
+  261 |   int num_cf = 0;
+      |       ^~~~~~
+g++ -c -MD -Iinclude -std=c++0x -O2 -Wall -D_USE_MATH_DEFINES -o .build/heuristics/qubo/lu2010.o src/heuristics/qubo/lu2010.cpp
+src/heuristics/qubo/lu2010.cpp: In constructor 'Lu2010PartialSolution::Lu2010PartialSolution(const QUBOInstance&, const Lu2010QUBOSolution&, const Lu2010QUBOSolution&, QUBOHeuristic*)':
+src/heuristics/qubo/lu2010.cpp:111:25: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<int>::size_type' {aka 'long long unsigned int'} [-Wsign-compare]
+  111 |     for (int idx=0; idx < NC.size(); ++idx) {
+      |                     ~~~~^~~~~~~~~~~
+src/heuristics/qubo/lu2010.cpp: In constructor 'Lu2010Population::Lu2010Population(int, const QUBOInstance&, QUBOHeuristic*)':
+src/heuristics/qubo/lu2010.cpp:178:27: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<int>::size_type' {aka 'long long unsigned int'} [-Wsign-compare]
+  178 |       for (int idx=0; idx < diffs.size(); ++idx) {
+      |                       ~~~~^~~~~~~~~~~~~~
+src/heuristics/qubo/lu2010.cpp: In member function 'void Lu2010Population::UpdatePool(const Lu2010QUBOSolution&)':
+src/heuristics/qubo/lu2010.cpp:250:25: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<int>::size_type' {aka 'long long unsigned int'} [-Wsign-compare]
+  250 |     for (int idx=0; idx < diffs.size(); ++idx) {
+      |                     ~~~~^~~~~~~~~~~~~~
+g++ -c -MD -Iinclude -std=c++0x -O2 -Wall -D_USE_MATH_DEFINES -o .build/heuristics/qubo/merz1999.o src/heuristics/qubo/merz1999.cpp
+src/heuristics/qubo/merz1999.cpp: In constructor 'Merz1999::Merz1999(const QUBOInstance&, double, bool, QUBOCallback*, int)':
+src/heuristics/qubo/merz1999.cpp:169:23: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<Merz1999Solution>::size_type' {aka 'long long unsigned int'} [-Wsign-compare]
+  169 |     for (int i = 0; i < population.size(); i++) {
+      |                     ~~^~~~~~~~~~~~~~~~~~~
+src/heuristics/qubo/merz1999.cpp:176:43: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<Merz1999Solution>::size_type' {aka 'long long unsigned int'} [-Wsign-compare]
+  176 |     for (int i = population.size() - 1; i >= population.size()-POP_SIZE; i--) {
+      |                                         ~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/heuristics/qubo/merz1999.cpp:204:25: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<Merz1999Solution>::size_type' {aka 'long long unsigned int'} [-Wsign-compare]
+  204 |       for (int i = 1; i < population.size(); i++) {  // Skip best
+      |                       ~~^~~~~~~~~~~~~~~~~~~
+g++ -c -MD -Iinclude -std=c++0x -O2 -Wall -D_USE_MATH_DEFINES -o .build/heuristics/qubo/merz2002.o src/heuristics/qubo/merz2002.cpp
+g++ -c -MD -Iinclude -std=c++0x -O2 -Wall -D_USE_MATH_DEFINES -o .build/heuristics/qubo/merz2004.o src/heuristics/qubo/merz2004.cpp
+src/heuristics/qubo/merz2004.cpp: In constructor 'Merz2004Solution::Merz2004Solution(const Merz2004Solution&, const Merz2004Solution&)':
+src/heuristics/qubo/merz2004.cpp:20:21: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<int>::size_type' {aka 'long long unsigned int'} [-Wsign-compare]
+   20 |     for (int i=0; i < nCB.size(); ++i) {
+      |                   ~~^~~~~~~~~~~~
+src/heuristics/qubo/merz2004.cpp:43:23: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<int>::size_type' {aka 'long long unsigned int'} [-Wsign-compare]
+   43 |       for (int i=1; i < CB.size(); ++i) {
+      |                     ~~^~~~~~~~~~~
+src/heuristics/qubo/merz2004.cpp: In member function 'void Merz2004Elite::SelectNonDuplicated(std::vector<Merz2004Solution>*)':
+src/heuristics/qubo/merz2004.cpp:184:19: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<Merz2004Solution>::size_type' {aka 'long long unsigned int'} [-Wsign-compare]
+  184 |   for (int i=0; i < x->size(); ++i) {
+      |                 ~~^~~~~~~~~~~
+src/heuristics/qubo/merz2004.cpp:187:21: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<Merz2004Solution>::size_type' {aka 'long long unsigned int'} [-Wsign-compare]
+  187 |     for (int j=0; j < P_.size(); ++j) {
+      |                   ~~^~~~~~~~~~~
+src/heuristics/qubo/merz2004.cpp:198:19: warning: comparison of integer expressions of different signedness: 'std::vector<Merz2004Solution>::size_type' {aka 'long long unsigned int'} and 'int' [-Wsign-compare]
+  198 |     if (P_.size() == PS_) {
+      |         ~~~~~~~~~~^~~~~~
+src/heuristics/qubo/merz2004.cpp: In member function 'void Merz2004Elite::Diversify()':
+src/heuristics/qubo/merz2004.cpp:234:21: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<Merz2004Solution>::size_type' {aka 'long long unsigned int'} [-Wsign-compare]
+  234 |     for (int i=1; i < P_.size(); ++i) {
+      |                   ~~^~~~~~~~~~~
+g++ -c -MD -Iinclude -std=c++0x -O2 -Wall -D_USE_MATH_DEFINES -o .build/heuristics/qubo/palubeckis2004b.o src/heuristics/qubo/palubeckis2004b.cpp
+src/heuristics/qubo/palubeckis2004b.cpp: In member function 'void Palubeckis2004bSolution::STSMod(double*, int, std::vector<Palubeckis2004bSolution>*, int, double, Palubeckis2004bSolution*, bool)':
+src/heuristics/qubo/palubeckis2004b.cpp:80:27: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<Palubeckis2004bSolution>::size_type' {aka 'long long unsigned int'} [-Wsign-compare]
+   80 |         for (int ct=0; ct < B->size(); ++ct) {
+      |                        ~~~^~~~~~~~~~~
+src/heuristics/qubo/palubeckis2004b.cpp:97:32: warning: comparison of integer expressions of different signedness: 'std::vector<Palubeckis2004bSolution>::size_type' {aka 'long long unsigned int'} and 'int' [-Wsign-compare]
+   97 |                      B->size() >= mStar) {
+      |                      ~~~~~~~~~~^~~~~~~~
+src/heuristics/qubo/palubeckis2004b.cpp:115:25: warning: comparison of integer expressions of different signedness: 'std::vector<Palubeckis2004bSolution>::size_type' {aka 'long long unsigned int'} and 'int' [-Wsign-compare]
+  115 |           if (B->size() < mStar) {
+      |               ~~~~~~~~~~^~~~~~~
+src/heuristics/qubo/palubeckis2004b.cpp: In member function 'void Palubeckis2004bSolution::SteepestAscent(std::vector<int>)':
+src/heuristics/qubo/palubeckis2004b.cpp:264:21: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<int>::size_type' {aka 'long long unsigned int'} [-Wsign-compare]
+  264 |   for (int ct=0; ct < I_star.size(); ++ct) {
+      |                  ~~~^~~~~~~~~~~~~~~
+src/heuristics/qubo/palubeckis2004b.cpp:275:21: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<int>::size_type' {aka 'long long unsigned int'} [-Wsign-compare]
+  275 |   for (int ct=0; ct < I_star.size(); ++ct) {
+      |                  ~~~^~~~~~~~~~~~~~~
+src/heuristics/qubo/palubeckis2004b.cpp:292:37: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<int>::size_type' {aka 'long long unsigned int'} [-Wsign-compare]
+  292 |   for (int iter_count=0; iter_count < I_star.size(); ++iter_count) {
+      |                          ~~~~~~~~~~~^~~~~~~~~~~~~~~
+src/heuristics/qubo/palubeckis2004b.cpp:300:23: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<int>::size_type' {aka 'long long unsigned int'} [-Wsign-compare]
+  300 |     for (int ct=0; ct < I_star.size(); ++ct) {
+      |                    ~~~^~~~~~~~~~~~~~~
+src/heuristics/qubo/palubeckis2004b.cpp:354:21: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<int>::size_type' {aka 'long long unsigned int'} [-Wsign-compare]
+  354 |   for (int ct=0; ct < to_flip.size(); ++ct) {
+      |                  ~~~^~~~~~~~~~~~~~~~
+src/heuristics/qubo/palubeckis2004b.cpp: In constructor 'Palubeckis2004bSolution::Palubeckis2004bSolution(const std::vector<Palubeckis2004bSolution>&, double)':
+src/heuristics/qubo/palubeckis2004b.cpp:509:19: warning: comparison of integer expressions of different signedness: '__gnu_cxx::__alloc_traits<std::allocator<int>, int>::value_type' {aka 'int'} and 'std::vector<Palubeckis2004bSolution>::size_type' {aka 'long long unsigned int'} [-Wsign-compare]
+  509 |     if (counts[i] != B.size() && counts[i] != 0) {
+src/heuristics/qubo/palubeckis2004b.cpp: In constructor 'Palubeckis2004bInstance::Palubeckis2004bInstance(const QUBOInstance&, const Palubeckis2004bSolution&)':
+src/heuristics/qubo/palubeckis2004b.cpp:623:21: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<std::vector<std::pair<int, double> > >::size_type' {aka 'long long unsigned int'} [-Wsign-compare]
+  623 |   for (int ct=0; ct < nonzero_.size(); ++ct) {
+      |                  ~~~^~~~~~~~~~~~~~~~~
+g++ -c -MD -Iinclude -std=c++0x -O2 -Wall -D_USE_MATH_DEFINES -o .build/heuristics/qubo/palubeckis2006.o src/heuristics/qubo/palubeckis2006.cpp
+g++ -c -MD -Iinclude -std=c++0x -O2 -Wall -D_USE_MATH_DEFINES -o .build/heuristics/qubo/pardalos2008.o src/heuristics/qubo/pardalos2008.cpp
+src/heuristics/qubo/pardalos2008.cpp: In member function 'const Pardalos2008QUBOSolution& Pardalos2008Elite::Best() const':
+src/heuristics/qubo/pardalos2008.cpp:161:23: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<Pardalos2008QUBOSolution>::size_type' {aka 'long long unsigned int'} [-Wsign-compare]
+  161 |   for (int idx=1; idx < Elite_.size(); ++idx) {
+      |                   ~~~~^~~~~~~~~~~~~~~
+src/heuristics/qubo/pardalos2008.cpp: In member function 'void Pardalos2008Elite::AddSolutions(const std::vector<Pardalos2008QUBOSolution>&)':
+src/heuristics/qubo/pardalos2008.cpp:180:23: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<Pardalos2008QUBOSolution>::size_type' {aka 'long long unsigned int'} [-Wsign-compare]
+  180 |   for (int idx=0; idx < slns.size(); ++idx) {
+      |                   ~~~~^~~~~~~~~~~~~
+src/heuristics/qubo/pardalos2008.cpp:181:23: warning: comparison of integer expressions of different signedness: 'std::vector<Pardalos2008QUBOSolution>::size_type' {aka 'long long unsigned int'} and 'int' [-Wsign-compare]
+  181 |     if (Elite_.size() < Esize_) {
+      |         ~~~~~~~~~~~~~~^~~~~~~~
+src/heuristics/qubo/pardalos2008.cpp: In member function 'void Pardalos2008Elite::LimitByBests(const std::vector<Pardalos2008QUBOSolution>&)':
+src/heuristics/qubo/pardalos2008.cpp:205:63: warning: comparison of integer expressions of different signedness: 'std::vector<int>::size_type' {aka 'long long unsigned int'} and 'int' [-Wsign-compare]
+  205 |   if (Elite_.size() > 0 && Elite_[0].get_assignments().size() < dp &&
+      |                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~
+src/heuristics/qubo/pardalos2008.cpp:214:19: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<Pardalos2008QUBOSolution>::size_type' {aka 'long long unsigned int'} [-Wsign-compare]
+  214 |   for (int i=0; i < Elite_.size(); ++i) {
+      |                 ~~^~~~~~~~~~~~~~~
+src/heuristics/qubo/pardalos2008.cpp:216:21: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<Pardalos2008QUBOSolution>::size_type' {aka 'long long unsigned int'} [-Wsign-compare]
+  216 |     for (int j=0; j < bests.size(); ++j) {
+      |                   ~~^~~~~~~~~~~~~~
+src/heuristics/qubo/pardalos2008.cpp: In member function 'void Pardalos2008Probs::AddSolutions(const std::vector<Pardalos2008QUBOSolution>&)':
+src/heuristics/qubo/pardalos2008.cpp:250:23: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<Pardalos2008QUBOSolution>::size_type' {aka 'long long unsigned int'} [-Wsign-compare]
+  250 |   for (int idx=0; idx < slns.size(); ++idx) {
+      |                   ~~~~^~~~~~~~~~~~~
+src/heuristics/qubo/pardalos2008.cpp:257:23: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<Pardalos2008QUBOSolution>::size_type' {aka 'long long unsigned int'} [-Wsign-compare]
+  257 |   for (int idx=0; idx < slns.size(); ++idx) {
+      |                   ~~~~^~~~~~~~~~~~~
+src/heuristics/qubo/pardalos2008.cpp: In constructor 'Pardalos2008::Pardalos2008(const QUBOInstance&, double, bool, QUBOCallback*)':
+src/heuristics/qubo/pardalos2008.cpp:365:31: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<Pardalos2008QUBOSolution>::size_type' {aka 'long long unsigned int'} [-Wsign-compare]
+  365 |           for (int idx=0; idx < R.size(); ++idx) {
+      |                           ~~~~^~~~~~~~~~
+g++ -c -MD -Iinclude -std=c++0x -O2 -Wall -D_USE_MATH_DEFINES -o .build/heuristics/qubo/qubo_partial_solution.o src/heuristics/qubo/qubo_partial_solution.cpp
+g++ -c -MD -Iinclude -std=c++0x -O2 -Wall -D_USE_MATH_DEFINES -o .build/heuristics/qubo/qubo_simple_solution.o src/heuristics/qubo/qubo_simple_solution.cpp
+src/heuristics/qubo/qubo_simple_solution.cpp: In constructor 'QUBOSimpleSolution::QUBOSimpleSolution(const MaxCutSimpleSolution&, const QUBOInstance&, QUBOHeuristic*)':
+src/heuristics/qubo/qubo_simple_solution.cpp:74:29: warning: comparison of integer expressions of different signedness: 'std::vector<int>::size_type' {aka 'long long unsigned int'} and 'int' [-Wsign-compare]
+   74 |   if (mc_assignments.size() != N_+1) {
+      |       ~~~~~~~~~~~~~~~~~~~~~~^~~~~~~
+g++ -c -MD -Iinclude -std=c++0x -O2 -Wall -D_USE_MATH_DEFINES -o .build/heuristics/qubo/qubo_solution.o src/heuristics/qubo/qubo_solution.cpp
+g++ -c -MD -Iinclude -std=c++0x -O2 -Wall -D_USE_MATH_DEFINES -o .build/main.o src/main.cpp
+src/main.cpp: In function 'int main(int, const char**)':
+src/main.cpp:165:21: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<std::__cxx11::basic_string<char> >::size_type' {aka 'long long unsigned int'} [-Wsign-compare]
+  165 |     for (int i=0; i < badOptions.size(); ++i) {
+      |                   ~~^~~~~~~~~~~~~~~~~~~
+src/main.cpp:173:21: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<std::__cxx11::basic_string<char> >::size_type' {aka 'long long unsigned int'} [-Wsign-compare]
+  173 |     for (int i=0; i < badOptions.size(); ++i) {
+      |                   ~~^~~~~~~~~~~~~~~~~~~
+src/main.cpp:183:21: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<std::__cxx11::basic_string<char> >::size_type' {aka 'long long unsigned int'} [-Wsign-compare]
+  183 |     for (int i=0; i < badOptions.size(); ++i) {
+      |                   ~~^~~~~~~~~~~~~~~~~~~
+src/main.cpp:366:23: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<std::__cxx11::basic_string<char> >::size_type' {aka 'long long unsigned int'} [-Wsign-compare]
+  366 |       for (int i=0; i < metric_names.size(); ++i) {
+      |                     ~~^~~~~~~~~~~~~~~~~~~~~
+src/main.cpp:374:23: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<std::__cxx11::basic_string<char> >::size_type' {aka 'long long unsigned int'} [-Wsign-compare]
+  374 |       for (int i=0; i < runtime_names.size(); ++i) {
+      |                     ~~^~~~~~~~~~~~~~~~~~~~~~
+src/main.cpp:391:23: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<double>::size_type' {aka 'long long unsigned int'} [-Wsign-compare]
+  391 |       for (int i=0; i < metrics.size(); ++i) {
+      |                     ~~^~~~~~~~~~~~~~~~
+src/main.cpp:397:23: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<double>::size_type' {aka 'long long unsigned int'} [-Wsign-compare]
+  397 |       for (int i=0; i < runtimes.size(); ++i) {
+      |                     ~~^~~~~~~~~~~~~~~~~
+g++ -c -MD -Iinclude -std=c++0x -O2 -Wall -D_USE_MATH_DEFINES -o .build/metrics/max_cut_metrics.o src/metrics/max_cut_metrics.cpp
+src/metrics/max_cut_metrics.cpp: In member function 'double GraphMetrics::DegreeAssortativity()':
+src/metrics/max_cut_metrics.cpp:611:19: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<int>::size_type' {aka 'long long unsigned int'} [-Wsign-compare]
+  611 |   for (int i=0; i < x.size(); ++i) {
+      |                 ~~^~~~~~~~~~
+g++ -c -MD -Iinclude -std=c++0x -O2 -Wall -D_USE_MATH_DEFINES -o .build/problem/heuristic.o src/problem/heuristic.cpp
+src/problem/heuristic.cpp: In member function 'std::string Heuristic::History()':
+src/problem/heuristic.cpp:26:21: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<double>::size_type' {aka 'long long unsigned int'} [-Wsign-compare]
+   26 |   for (int i = 0; i < past_solution_values_.size(); i++) {
+      |                   ~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+g++ -c -MD -Iinclude -std=c++0x -O2 -Wall -D_USE_MATH_DEFINES -o .build/problem/instance.o src/problem/instance.cpp
+g++ -c -MD -Iinclude -std=c++0x -O2 -Wall -D_USE_MATH_DEFINES -o .build/problem/max_cut_heuristic.o src/problem/max_cut_heuristic.cpp
+src/problem/max_cut_heuristic.cpp: In member function 'virtual bool MaxCutHeuristic::IsHistoryValid()':
+src/problem/max_cut_heuristic.cpp:92:21: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<double>::size_type' {aka 'long long unsigned int'} [-Wsign-compare]
+   92 |   for (int i = 0; i < past_solution_values_.size(); i++) {
+      |                   ~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+g++ -c -MD -Iinclude -std=c++0x -O2 -Wall -D_USE_MATH_DEFINES -o .build/problem/max_cut_instance.o src/problem/max_cut_instance.cpp
+g++ -c -MD -Iinclude -std=c++0x -O2 -Wall -D_USE_MATH_DEFINES -o .build/problem/qubo_heuristic.o src/problem/qubo_heuristic.cpp
+src/problem/qubo_heuristic.cpp: In member function 'virtual bool QUBOHeuristic::IsHistoryValid()':
+src/problem/qubo_heuristic.cpp:89:21: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<double>::size_type' {aka 'long long unsigned int'} [-Wsign-compare]
+   89 |   for (int i = 0; i < past_solution_values_.size(); i++) {
+      |                   ~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+g++ -c -MD -Iinclude -std=c++0x -O2 -Wall -D_USE_MATH_DEFINES -o .build/problem/qubo_instance.o src/problem/qubo_instance.cpp
+src/problem/qubo_instance.cpp: In constructor 'QUBOInstance::QUBOInstance(const std::vector<std::pair<std::pair<int, int>, double> >&, const std::vector<double>&, int)':
+src/problem/qubo_instance.cpp:15:23: warning: comparison of integer expressions of different signedness: 'std::vector<double>::size_type' {aka 'long long unsigned int'} and 'int' [-Wsign-compare]
+   15 |   if (mainDiag.size() != dimension) {
+      |       ~~~~~~~~~~~~~~~~^~~~~~~~~~~~
+g++ -c -MD -Iinclude -std=c++0x -O2 -Wall -D_USE_MATH_DEFINES -o .build/util/random.o src/util/random.cpp
+src/util/random.cpp: In static member function 'static void Random::MultiRouletteWheel(const std::vector<double>&, int, std::vector<int>*)':
+src/util/random.cpp:38:21: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<double>::size_type' {aka 'long long unsigned int'} [-Wsign-compare]
+   38 |   for (int ct=0; ct < scores.size(); ++ct) {
+      |                  ~~~^~~~~~~~~~~~~~~
+src/util/random.cpp:48:9: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<std::pair<double, int> >::size_type' {aka 'long long unsigned int'} [-Wsign-compare]
+   48 |   if (m < values.size()) {
+      |       ~~^~~~~~~~~~~~~~~
+g++ -c -MD -Iinclude -std=c++0x -O2 -Wall -D_USE_MATH_DEFINES -o .build/util/randomForest.o src/util/randomForest.cpp
+src/util/randomForest.cpp: In constructor 'RandomForest::RandomForest(const std::string&)':
+src/util/randomForest.cpp:35:22: warning: comparison of integer expressions of different signedness: 'std::vector<int>::size_type' {aka 'long long unsigned int'} and 'int' [-Wsign-compare]
+   35 |   if (_offset.size() != _ntree) {
+      |       ~~~~~~~~~~~~~~~^~~~~~~~~
+src/util/randomForest.cpp: In member function 'double RandomForest::Predict(const std::vector<double>&)':
+src/util/randomForest.cpp:61:19: warning: comparison of integer expressions of different signedness: 'std::vector<double>::size_type' {aka 'long long unsigned int'} and 'int' [-Wsign-compare]
+   61 |   if (vars.size() != _nvar) {
+      |       ~~~~~~~~~~~~^~~~~~~~
+g++ -lm -o bin/MQLib .build/heuristics/base_solution.o .build/heuristics/extended_solution.o .build/heuristics/heuristic_factory.o .build/heuristics/maxcut/baseline.o .build/heuristics/maxcut/burer2002.o .build/heuristics/maxcut/deSousa2013.o .build/heuristics/maxcut/duarte2005.o .build/heuristics/maxcut/festa2002.o .build/heuristics/maxcut/hyperheuristic.o .build/heuristics/maxcut/laguna2009.o .build/heuristics/maxcut/max_cut_partial_solution.o .build/heuristics/maxcut/max_cut_simple_solution.o .build/heuristics/maxcut/max_cut_solution.o .build/heuristics/qubo/alkhamis1998.o .build/heuristics/qubo/beasley1998.o .build/heuristics/qubo/glover1998a.o .build/heuristics/qubo/glover2010.o .build/heuristics/qubo/hasan2000.o .build/heuristics/qubo/katayama2000.o .build/heuristics/qubo/katayama2001.o .build/heuristics/qubo/lodi1999.o .build/heuristics/qubo/lu2010.o .build/heuristics/qubo/merz1999.o .build/heuristics/qubo/merz2002.o .build/heuristics/qubo/merz2004.o .build/heuristics/qubo/palubeckis2004b.o .build/heuristics/qubo/palubeckis2006.o .build/heuristics/qubo/pardalos2008.o .build/heuristics/qubo/qubo_partial_solution.o .build/heuristics/qubo/qubo_simple_solution.o .build/heuristics/qubo/qubo_solution.o .build/main.o .build/metrics/max_cut_metrics.o .build/problem/heuristic.o .build/problem/instance.o .build/problem/max_cut_heuristic.o .build/problem/max_cut_instance.o .build/problem/qubo_heuristic.o .build/problem/qubo_instance.o .build/util/random.o .build/util/randomForest.o
+ar -cq bin/MQLib.a .build/heuristics/base_solution.o .build/heuristics/extended_solution.o .build/heuristics/heuristic_factory.o .build/heuristics/maxcut/baseline.o .build/heuristics/maxcut/burer2002.o .build/heuristics/maxcut/deSousa2013.o .build/heuristics/maxcut/duarte2005.o .build/heuristics/maxcut/festa2002.o .build/heuristics/maxcut/hyperheuristic.o .build/heuristics/maxcut/laguna2009.o .build/heuristics/maxcut/max_cut_partial_solution.o .build/heuristics/maxcut/max_cut_simple_solution.o .build/heuristics/maxcut/max_cut_solution.o .build/heuristics/qubo/alkhamis1998.o .build/heuristics/qubo/beasley1998.o .build/heuristics/qubo/glover1998a.o .build/heuristics/qubo/glover2010.o .build/heuristics/qubo/hasan2000.o .build/heuristics/qubo/katayama2000.o .build/heuristics/qubo/katayama2001.o .build/heuristics/qubo/lodi1999.o .build/heuristics/qubo/lu2010.o .build/heuristics/qubo/merz1999.o .build/heuristics/qubo/merz2002.o .build/heuristics/qubo/merz2004.o .build/heuristics/qubo/palubeckis2004b.o .build/heuristics/qubo/palubeckis2006.o .build/heuristics/qubo/pardalos2008.o .build/heuristics/qubo/qubo_partial_solution.o .build/heuristics/qubo/qubo_simple_solution.o .build/heuristics/qubo/qubo_solution.o .build/main.o .build/metrics/max_cut_metrics.o .build/problem/heuristic.o .build/problem/instance.o .build/problem/max_cut_heuristic.o .build/problem/max_cut_instance.o .build/problem/qubo_heuristic.o .build/problem/qubo_instance.o .build/util/random.o .build/util/randomForest.o
+-rwxr-xr-x 1 USER None 655052 Nov  3 23:54 tree-qmc.exe

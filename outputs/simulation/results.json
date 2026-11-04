@@ -1,0 +1,202 @@
+[
+ {
+  "rep": 1,
+  "cond": "true_gene_trees",
+  "method": "unweighted",
+  "L": 0,
+  "gtee": 0.0,
+  "rf": 0.0
+ },
+ {
+  "rep": 1,
+  "cond": "L100",
+  "method": "unweighted",
+  "L": 100,
+  "gtee": 0.3515384615384615,
+  "rf": 0.0
+ },
+ {
+  "rep": 1,
+  "cond": "L100",
+  "method": "hybrid",
+  "L": 100,
+  "gtee": 0.3515384615384615,
+  "rf": 0.0
+ },
+ {
+  "rep": 1,
+  "cond": "L400",
+  "method": "unweighted",
+  "L": 400,
+  "gtee": 0.12384615384615386,
+  "rf": 0.0
+ },
+ {
+  "rep": 1,
+  "cond": "L400",
+  "method": "hybrid",
+  "L": 400,
+  "gtee": 0.12384615384615386,
+  "rf": 0.0
+ },
+ {
+  "rep": 2,
+  "cond": "true_gene_trees",
+  "method": "unweighted",
+  "L": 0,
+  "gtee": 0.0,
+  "rf": 0.0
+ },
+ {
+  "rep": 2,
+  "cond": "L100",
+  "method": "unweighted",
+  "L": 100,
+  "gtee": 0.38,
+  "rf": 0.07692307692307693
+ },
+ {
+  "rep": 2,
+  "cond": "L100",
+  "method": "hybrid",
+  "L": 100,
+  "gtee": 0.38,
+  "rf": 0.07692307692307693
+ },
+ {
+  "rep": 2,
+  "cond": "L400",
+  "method": "unweighted",
+  "L": 400,
+  "gtee": 0.1876923076923077,
+  "rf": 0.07692307692307693
+ },
+ {
+  "rep": 2,
+  "cond": "L400",
+  "method": "hybrid",
+  "L": 400,
+  "gtee": 0.1876923076923077,
+  "rf": 0.0
+ },
+ {
+  "rep": 3,
+  "cond": "true_gene_trees",
+  "method": "unweighted",
+  "L": 0,
+  "gtee": 0.0,
+  "rf": 0.0
+ },
+ {
+  "rep": 3,
+  "cond": "L100",
+  "method": "unweighted",
+  "L": 100,
+  "gtee": 0.4053846153846154,
+  "rf": 0.07692307692307693
+ },
+ {
+  "rep": 3,
+  "cond": "L100",
+  "method": "hybrid",
+  "L": 100,
+  "gtee": 0.4053846153846154,
+  "rf": 0.0
+ },
+ {
+  "rep": 3,
+  "cond": "L400",
+  "method": "unweighted",
+  "L": 400,
+  "gtee": 0.16384615384615386,
+  "rf": 0.0
+ },
+ {
+  "rep": 3,
+  "cond": "L400",
+  "method": "hybrid",
+  "L": 400,
+  "gtee": 0.16384615384615386,
+  "rf": 0.0
+ },
+ {
+  "rep": 4,
+  "cond": "true_gene_trees",
+  "method": "unweighted",
+  "L": 0,
+  "gtee": 0.0,
+  "rf": 0.0
+ },
+ {
+  "rep": 4,
+  "cond": "L100",
+  "method": "unweighted",
+  "L": 100,
+  "gtee": 0.34692307692307695,
+  "rf": 0.0
+ },
+ {
+  "rep": 4,
+  "cond": "L100",
+  "method": "hybrid",
+  "L": 100,
+  "gtee": 0.34692307692307695,
+  "rf": 0.0
+ },
+ {
+  "rep": 4,
+  "cond": "L400",
+  "method": "unweighted",
+  "L": 400,
+  "gtee": 0.1346153846153846,
+  "rf": 0.0
+ },
+ {
+  "rep": 4,
+  "cond": "L400",
+  "method": "hybrid",
+  "L": 400,
+  "gtee": 0.1346153846153846,
+  "rf": 0.0
+ },
+ {
+  "rep": 5,
+  "cond": "true_gene_trees",
+  "method": "unweighted",
+  "L": 0,
+  "gtee": 0.0,
+  "rf": 0.0
+ },
+ {
+  "rep": 5,
+  "cond": "L100",
+  "method": "unweighted",
+  "L": 100,
+  "gtee": 0.37923076923076926,
+  "rf": 0.0
+ },
+ {
+  "rep": 5,
+  "cond": "L100",
+  "method": "hybrid",
+  "L": 100,
+  "gtee": 0.37923076923076926,
+  "rf": 0.0
+ },
+ {
+  "rep": 5,
+  "cond": "L400",
+  "method": "unweighted",
+  "L": 400,
+  "gtee": 0.15,
+  "rf": 0.0
+ },
+ {
+  "rep": 5,
+  "cond": "L400",
+  "method": "hybrid",
+  "L": 400,
+  "gtee": 0.15,
+  "rf": 0.0
+ }
+]

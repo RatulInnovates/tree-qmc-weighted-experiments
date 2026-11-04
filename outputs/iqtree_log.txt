@@ -1,0 +1,314 @@
+IQ-TREE version 3.1.4 for Windows 64-bit built Sep 10 2026
+Developed by Bui Quang Minh, Thomas Wong, Nhan Ly-Trong, Huaiyan Ren
+Contributed by Lam-Tung Nguyen, Dominik Schrempf, Chris Bielow,
+Olga Chernomor, Michael Woodhams, Diep Thi Hoang, Heiko Schmidt
+
+Host:    Ratuls-PC (AVX2, FMA3, 15 GB RAM)
+Command: D:\_Personal\Random Projects\TREE-QMC\outputs\tools\iqtree\iqtree-3.1.4-Windows\bin\iqtree3.exe -s msa_input/clean_gene1.fasta -m MFP --seed 12345 -T 1 --prefix iq_work/gene1
+Seed:    12345 (Using SPRNG - Scalable Parallel Random Number Generator)
+Time:    Tue Nov 03 23:54:44 2026
+Kernel:  AVX+FMA - 1 threads (12 CPU cores detected)
+
+HINT: Use -nt option to specify number of threads because your CPU has 12 cores!
+HINT: -nt AUTO will automatically determine the best number of threads to use.
+
+Reading alignment file msa_input/clean_gene1.fasta ... Fasta format detected
+Reading fasta file: done in 0.000112 secs
+Alignment most likely contains DNA/RNA sequences
+Constructing alignment: done in 4.56e-005 secs
+Alignment has 6 sequences with 24 columns, 7 distinct patterns
+3 parsimony-informative, 0 singleton sites, 21 constant sites
+   Gap/Ambiguity  Composition  p-value
+Analyzing sequences: done in 8.8e-006 secs
+   1  A    0.00%    passed     89.62%
+   2  B    0.00%    passed     99.63%
+   3  C    0.00%    passed     97.81%
+   4  D    0.00%    passed     99.63%
+   5  E    0.00%    passed     98.97%
+   6  F    0.00%    passed     91.40%
+****  TOTAL    0.00%  0 sequences failed composition chi2 test (p-value<5%; df=3)
+Checking for duplicate sequences: done in 2.23e-005 secs
+
+
+Create initial parsimony tree by phylogenetic likelihood library (PLL)... 0.000 seconds
+Perform fast likelihood tree search using GTR+I+G model...
+Estimate model parameters (epsilon = 5.000)
+Perform nearest neighbor interchange...
+Estimate model parameters (epsilon = 1.000)
+1. Initial log-likelihood: -51.321
+Optimal log-likelihood: -51.286
+Rate parameters:  A-C: 1.19984  A-G: 8.77783  A-T: 0.00010  C-G: 0.00010  C-T: 0.00010  G-T: 1.00000
+Warning! Some parameters hit the boundaries
+Base frequencies:  A: 0.312  C: 0.236  G: 0.201  T: 0.250
+Proportion of invariable sites: 0.380
+Gamma shape alpha: 0.020
+Parameters optimization took 1 rounds (0.001 sec)
+Time for fast ML tree search: 0.003 seconds
+
+NOTE: ModelFinder requires 0 MB RAM!
+ModelFinder will test up to 968 DNA models (sample size: 24 epsilon: 0.100) ...
+Akaike Information Criterion:           TN+I
+Corrected Akaike Information Criterion: F81
+Bayesian Information Criterion:         TN+I
+Best-fit model: TN+I chosen according to BIC
+
+All model information printed to iq_work/gene1.model.gz
+CPU time for ModelFinder: 0.188 seconds (0h:0m:0s)
+Wall-clock time for ModelFinder: 0.226 seconds (0h:0m:0s)
+
+NOTE: 0 MB RAM (0 GB) is required!
+Estimate model parameters (epsilon = 0.100)
+1. Initial log-likelihood: -50.560
+Optimal log-likelihood: -50.557
+Rate parameters:  A-C: 1.00000  A-G: 129.44904  A-T: 1.00000  C-G: 1.00000  C-T: 0.00013  G-T: 1.00000
+Warning! Some parameters hit the boundaries
+Base frequencies:  A: 0.312  C: 0.236  G: 0.201  T: 0.250
+Proportion of invariable sites: 0.792
+Parameters optimization took 1 rounds (0.001 sec)
+
+WARNING: Estimated model parameters are at boundary that can cause numerical instability!
+
+Wrote distance file to... 
+Computing ML distances based on estimated model parameters...
+Calculating distance matrix: done in 7.6e-005 secs
+Computing ML distances took 0.000295 sec (of wall-clock time) 0.000000 sec (of CPU time)
+WARNING: Some pairwise ML distances are too long (saturated)
+Setting up auxiliary I and S matrices: done in 3.27e-005 secs
+Constructing RapidNJ tree: done in 3.67e-005 secs
+Computing RapidNJ tree took 0.000263 sec (of wall-clock time) 0.000000 sec (of CPU time)
+Log-likelihood of RapidNJ tree: -50.557
+--------------------------------------------------------------------
+|             INITIALIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Generating 98 parsimony trees... 0.013 second
+Computing log-likelihood of 31 initial trees ... 0.003 seconds
+Current best score: -50.551
+
+Do NNI search on 20 best initial trees
+Estimate model parameters (epsilon = 0.100)
+
+WARNING: Estimated model parameters are at boundary that can cause numerical instability!
+
+BETTER TREE FOUND at iteration 1: -50.422
+BETTER TREE FOUND at iteration 2: -50.422
+BETTER TREE FOUND at iteration 4: -50.422
+UPDATE BEST LOG-LIKELIHOOD: -50.422
+Iteration 10 / LogL: -50.557 / Time: 0h:0m:0s
+Iteration 20 / LogL: -50.557 / Time: 0h:0m:0s
+Finish initializing candidate tree set (13)
+Current best tree score: -50.422 / CPU time: 0.025
+Number of iterations: 20
+--------------------------------------------------------------------
+|               OPTIMIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+UPDATE BEST LOG-LIKELIHOOD: -50.422
+Iteration 30 / LogL: -50.422 / Time: 0h:0m:0s (0h:0m:0s left)
+UPDATE BEST LOG-LIKELIHOOD: -50.422
+UPDATE BEST LOG-LIKELIHOOD: -50.422
+Iteration 40 / LogL: -50.422 / Time: 0h:0m:0s (0h:0m:0s left)
+UPDATE BEST LOG-LIKELIHOOD: -50.422
+UPDATE BEST LOG-LIKELIHOOD: -50.422
+Iteration 50 / LogL: -50.422 / Time: 0h:0m:0s (0h:0m:0s left)
+UPDATE BEST LOG-LIKELIHOOD: -50.422
+UPDATE BEST LOG-LIKELIHOOD: -50.422
+UPDATE BEST LOG-LIKELIHOOD: -50.422
+UPDATE BEST LOG-LIKELIHOOD: -50.422
+UPDATE BEST LOG-LIKELIHOOD: -50.422
+Iteration 60 / LogL: -50.422 / Time: 0h:0m:0s (0h:0m:0s left)
+UPDATE BEST LOG-LIKELIHOOD: -50.422
+UPDATE BEST LOG-LIKELIHOOD: -50.422
+UPDATE BEST LOG-LIKELIHOOD: -50.422
+Iteration 70 / LogL: -50.422 / Time: 0h:0m:0s (0h:0m:0s left)
+UPDATE BEST LOG-LIKELIHOOD: -50.422
+UPDATE BEST LOG-LIKELIHOOD: -50.422
+Iteration 80 / LogL: -50.422 / Time: 0h:0m:0s (0h:0m:0s left)
+UPDATE BEST LOG-LIKELIHOOD: -50.422
+UPDATE BEST LOG-LIKELIHOOD: -50.422
+Iteration 90 / LogL: -50.422 / Time: 0h:0m:0s (0h:0m:0s left)
+UPDATE BEST LOG-LIKELIHOOD: -50.422
+Iteration 100 / LogL: -50.422 / Time: 0h:0m:0s (0h:0m:0s left)
+UPDATE BEST LOG-LIKELIHOOD: -50.422
+TREE SEARCH COMPLETED AFTER 105 ITERATIONS / Time: 0h:0m:0s
+
+--------------------------------------------------------------------
+|                    FINALIZING TREE SEARCH                        |
+--------------------------------------------------------------------
+Performs final model parameters optimization
+Estimate model parameters (epsilon = 0.010)
+1. Initial log-likelihood: -50.422
+Optimal log-likelihood: -50.422
+Rate parameters:  A-C: 1.00000  A-G: 129.44904  A-T: 1.00000  C-G: 1.00000  C-T: 0.00013  G-T: 1.00000
+Warning! Some parameters hit the boundaries
+Base frequencies:  A: 0.312  C: 0.236  G: 0.201  T: 0.250
+Proportion of invariable sites: 0.790
+Parameters optimization took 1 rounds (0.001 sec)
+
+WARNING: Estimated model parameters are at boundary that can cause numerical instability!
+
+BEST SCORE FOUND : -50.422
+Total tree length: 2.000
+
+Total number of iterations: 105
+CPU time used for tree search: 0.172 sec (0h:0m:0s)
+Wall-clock time used for tree search: 0.107 sec (0h:0m:0s)
+Total CPU time used: 0.359 sec (0h:0m:0s)
+Total wall-clock time used: 0.353 sec (0h:0m:0s)
+
+Analysis results written to: 
+  IQ-TREE report:                iq_work/gene1.iqtree
+  Maximum-likelihood tree:       iq_work/gene1.treefile
+  Likelihood distances:          iq_work/gene1.mldist
+  Screen log file:               iq_work/gene1.log
+
+Date and Time: Tue Nov 03 23:54:44 2026
+IQ-TREE version 3.1.4 for Windows 64-bit built Sep 10 2026
+Developed by Bui Quang Minh, Thomas Wong, Nhan Ly-Trong, Huaiyan Ren
+Contributed by Lam-Tung Nguyen, Dominik Schrempf, Chris Bielow,
+Olga Chernomor, Michael Woodhams, Diep Thi Hoang, Heiko Schmidt
+
+Host:    Ratuls-PC (AVX2, FMA3, 15 GB RAM)
+Command: D:\_Personal\Random Projects\TREE-QMC\outputs\tools\iqtree\iqtree-3.1.4-Windows\bin\iqtree3.exe -s msa_input/clean_gene2.fasta -m MFP --seed 12345 -T 1 --prefix iq_work/gene2
+Seed:    12345 (Using SPRNG - Scalable Parallel Random Number Generator)
+Time:    Tue Nov 03 23:54:44 2026
+Kernel:  AVX+FMA - 1 threads (12 CPU cores detected)
+
+HINT: Use -nt option to specify number of threads because your CPU has 12 cores!
+HINT: -nt AUTO will automatically determine the best number of threads to use.
+
+Reading alignment file msa_input/clean_gene2.fasta ... Fasta format detected
+Reading fasta file: done in 8.09e-005 secs
+Alignment most likely contains DNA/RNA sequences
+Constructing alignment: done in 3.92e-005 secs
+Alignment has 6 sequences with 24 columns, 7 distinct patterns
+3 parsimony-informative, 0 singleton sites, 21 constant sites
+   Gap/Ambiguity  Composition  p-value
+Analyzing sequences: done in 7.5e-006 secs
+   1  A    0.00%    passed     91.69%
+   2  B    0.00%    passed     99.73%
+   3  C    0.00%    passed     96.41%
+   4  D    0.00%    passed     99.73%
+   5  E    0.00%    passed     98.38%
+   6  F    0.00%    passed     94.22%
+****  TOTAL    0.00%  0 sequences failed composition chi2 test (p-value<5%; df=3)
+Checking for duplicate sequences: done in 1.88e-005 secs
+
+
+Create initial parsimony tree by phylogenetic likelihood library (PLL)... 0.000 seconds
+Perform fast likelihood tree search using GTR+I+G model...
+Estimate model parameters (epsilon = 5.000)
+Perform nearest neighbor interchange...
+Estimate model parameters (epsilon = 1.000)
+1. Initial log-likelihood: -50.913
+Optimal log-likelihood: -50.894
+Rate parameters:  A-C: 0.00010  A-G: 1.73098  A-T: 0.00010  C-G: 0.00010  C-T: 8.03841  G-T: 1.00000
+Warning! Some parameters hit the boundaries
+Base frequencies:  A: 0.278  C: 0.201  G: 0.222  T: 0.299
+Proportion of invariable sites: 0.399
+Gamma shape alpha: 0.020
+Parameters optimization took 1 rounds (0.001 sec)
+Time for fast ML tree search: 0.003 seconds
+
+NOTE: ModelFinder requires 0 MB RAM!
+ModelFinder will test up to 968 DNA models (sample size: 24 epsilon: 0.100) ...
+Akaike Information Criterion:           K2P+I
+Corrected Akaike Information Criterion: K2P
+Bayesian Information Criterion:         K2P+I
+Best-fit model: K2P+I chosen according to BIC
+
+All model information printed to iq_work/gene2.model.gz
+CPU time for ModelFinder: 0.141 seconds (0h:0m:0s)
+Wall-clock time for ModelFinder: 0.163 seconds (0h:0m:0s)
+
+NOTE: 0 MB RAM (0 GB) is required!
+Estimate model parameters (epsilon = 0.100)
+1. Initial log-likelihood: -51.397
+Optimal log-likelihood: -51.375
+Rate parameters:  A-C: 1.00000  A-G: 204.57631  A-T: 1.00000  C-G: 1.00000  C-T: 204.57631  G-T: 1.00000
+Warning! Some parameters hit the boundaries
+Base frequencies:  A: 0.250  C: 0.250  G: 0.250  T: 0.250
+Proportion of invariable sites: 0.837
+Parameters optimization took 1 rounds (0.001 sec)
+
+WARNING: Estimated model parameters are at boundary that can cause numerical instability!
+
+Wrote distance file to... 
+Computing ML distances based on estimated model parameters...
+Calculating distance matrix: done in 5.58e-005 secs
+Computing ML distances took 0.000261 sec (of wall-clock time) 0.000000 sec (of CPU time)
+Setting up auxiliary I and S matrices: done in 4.35e-005 secs
+Constructing RapidNJ tree: done in 4.21e-005 secs
+Computing RapidNJ tree took 0.000337 sec (of wall-clock time) 0.000000 sec (of CPU time)
+Log-likelihood of RapidNJ tree: -51.375
+--------------------------------------------------------------------
+|             INITIALIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Generating 98 parsimony trees... 0.013 second
+Computing log-likelihood of 34 initial trees ... 0.003 seconds
+Current best score: -51.375
+
+Do NNI search on 20 best initial trees
+Estimate model parameters (epsilon = 0.100)
+
+WARNING: Estimated model parameters are at boundary that can cause numerical instability!
+
+BETTER TREE FOUND at iteration 1: -51.375
+BETTER TREE FOUND at iteration 6: -51.375
+Iteration 10 / LogL: -51.375 / Time: 0h:0m:0s
+BETTER TREE FOUND at iteration 13: -51.375
+Iteration 20 / LogL: -51.852 / Time: 0h:0m:0s
+Finish initializing candidate tree set (16)
+Current best tree score: -51.375 / CPU time: 0.023
+Number of iterations: 20
+--------------------------------------------------------------------
+|               OPTIMIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+UPDATE BEST LOG-LIKELIHOOD: -51.375
+UPDATE BEST LOG-LIKELIHOOD: -51.375
+UPDATE BEST LOG-LIKELIHOOD: -51.375
+WARNING: NNI search needs unusual large number of steps (6) to converge!
+Iteration 30 / LogL: -51.375 / Time: 0h:0m:0s (0h:0m:0s left)
+Iteration 40 / LogL: -51.375 / Time: 0h:0m:0s (0h:0m:0s left)
+Iteration 50 / LogL: -51.375 / Time: 0h:0m:0s (0h:0m:0s left)
+UPDATE BEST LOG-LIKELIHOOD: -51.375
+Iteration 60 / LogL: -51.375 / Time: 0h:0m:0s (0h:0m:0s left)
+Iteration 70 / LogL: -51.375 / Time: 0h:0m:0s (0h:0m:0s left)
+WARNING: NNI search needs unusual large number of steps (6) to converge!
+Iteration 80 / LogL: -51.375 / Time: 0h:0m:0s (0h:0m:0s left)
+WARNING: NNI search needs unusual large number of steps (6) to converge!
+WARNING: NNI search needs unusual large number of steps (6) to converge!
+Iteration 90 / LogL: -51.375 / Time: 0h:0m:0s (0h:0m:0s left)
+Iteration 100 / LogL: -51.375 / Time: 0h:0m:0s (0h:0m:0s left)
+Iteration 110 / LogL: -51.375 / Time: 0h:0m:0s (0h:0m:0s left)
+TREE SEARCH COMPLETED AFTER 114 ITERATIONS / Time: 0h:0m:0s
+
+--------------------------------------------------------------------
+|                    FINALIZING TREE SEARCH                        |
+--------------------------------------------------------------------
+Performs final model parameters optimization
+Estimate model parameters (epsilon = 0.010)
+1. Initial log-likelihood: -51.375
+Optimal log-likelihood: -51.375
+Rate parameters:  A-C: 1.00000  A-G: 204.57631  A-T: 1.00000  C-G: 1.00000  C-T: 204.57631  G-T: 1.00000
+Warning! Some parameters hit the boundaries
+Base frequencies:  A: 0.250  C: 0.250  G: 0.250  T: 0.250
+Proportion of invariable sites: 0.838
+Parameters optimization took 1 rounds (0.001 sec)
+
+WARNING: Estimated model parameters are at boundary that can cause numerical instability!
+
+BEST SCORE FOUND : -51.375
+Total tree length: 0.289
+
+Total number of iterations: 114
+CPU time used for tree search: 0.125 sec (0h:0m:0s)
+Wall-clock time used for tree search: 0.077 sec (0h:0m:0s)
+Total CPU time used: 0.281 sec (0h:0m:0s)
+Total wall-clock time used: 0.260 sec (0h:0m:0s)
+
+Analysis results written to: 
+  IQ-TREE report:                iq_work/gene2.iqtree
+  Maximum-likelihood tree:       iq_work/gene2.treefile
+  Likelihood distances:          iq_work/gene2.mldist
+  Screen log file:               iq_work/gene2.log
+
+Date and Time: Tue Nov 03 23:54:45 2026

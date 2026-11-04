@@ -1,0 +1,4 @@
+outputs/tools/
+outputs/tqmc_pre_network/
+outputs/simulation/work/
+__pycache__/

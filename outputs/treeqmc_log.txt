@@ -1,0 +1,148 @@
+### Test A: 2 clean gene trees (pipeline check only)
+TREE-QMC version 4.1.5
+COMMAND: D:\_Personal\Random Projects\TREE-QMC\outputs\tqmc_pre_network\build\tree-qmc.exe -i gene_trees/gene_trees.tre -o species_tree/species_tree.nwk --override 
+
+SETTINGS:
+input file: gene_trees/gene_trees.tre
+output file: species_tree/species_tree.nwk
+weighting mode: none
+  WARNING: --hybrid option is recommended
+normalization for artifical taxa mode: n2
+execution mode: efficient
+random seed for refinement: 12345
+random seed for max-cut: 1
+max-cut heuristic iteration limit: 10
+
+LOGGING:
+Reading input
+Found
+    2 trees
+    6 taxa
+    0 polytomies across all trees
+Constructing species tree
+At most 7 subproblems:
+    0 subproblems computed.
+    7 subproblems computed.
+Printing output tree:
+(((C,F),B),((A,D),E));
+Writing species tree
+Execution time: 0secs
+exit=0
+(((C,F),B),((A,D),E));
+### Test B: bundled avian dataset, 3679 gene trees (program-level test)
+TREE-QMC version 4.1.5
+COMMAND: D:\_Personal\Random Projects\TREE-QMC\outputs\tqmc_pre_network\build\tree-qmc.exe -i iq_work/avian_clean.tre -a ../tutorial/gene-trees/avian_name_map.txt -o species_tree/avian_species_tree.nwk --override 
+
+SETTINGS:
+input file: iq_work/avian_clean.tre
+mapping file: ../tutorial/gene-trees/avian_name_map.txt
+output file: species_tree/avian_species_tree.nwk
+weighting mode: none
+  WARNING: --hybrid option is recommended
+normalization for artifical taxa mode: n2
+execution mode: efficient
+random seed for refinement: 12345
+random seed for max-cut: 1
+max-cut heuristic iteration limit: 10
+
+LOGGING:
+Reading mapping file
+
+ERROR: Unable to process mapping file
+
+real	0m0.025s
+user	0m0.000s
+sys	0m0.000s
+exit=1
+head: cannot open 'species_tree/avian_species_tree.nwk' for reading: No such file or directory
+
+### Test B1: avian, unweighted
+TREE-QMC version 4.1.5
+COMMAND: D:\_Personal\Random Projects\TREE-QMC\outputs\tqmc_pre_network\build\tree-qmc.exe -i iq_work/avian_clean.tre -o species_tree/avian_unweighted.nwk --override 
+
+SETTINGS:
+input file: iq_work/avian_clean.tre
+output file: species_tree/avian_unweighted.nwk
+weighting mode: none
+  WARNING: --hybrid option is recommended
+normalization for artifical taxa mode: n2
+execution mode: efficient
+random seed for refinement: 12345
+random seed for max-cut: 1
+max-cut heuristic iteration limit: 10
+
+LOGGING:
+Reading input
+Found
+    3679 trees
+    48 taxa
+    0 polytomies across all trees
+Constructing species tree
+At most 91 subproblems:
+    0 subproblems computed.
+   10 subproblems computed.
+   20 subproblems computed.
+   30 subproblems computed.
+   40 subproblems computed.
+   50 subproblems computed.
+   60 subproblems computed.
+   70 subproblems computed.
+   80 subproblems computed.
+   90 subproblems computed.
+   91 subproblems computed.
+Printing output tree:
+(((((((((GEOFO,TAEGU),CORBR),MANVI),ACACH),(MELUN,NESNO)),FALPE),CARCR),(((HALLE,HALAL),CATAU),((((((MERNU,PICPU),BUCRH),APAVI),LEPDI),COLST),TYTAL))),((((((GALGA,MELGA),ANAPL),(STRCA,TINMA)),(PODCR,PHORU)),(((PTEGU,MESUN),COLLI),((CHLUN,TAUER),CUCCA))),(((((((PYGAD,APTFO),FULGL),(((EGRGA,PELCR),NIPNI),PHACA)),GAVST),(EURHE,PHALE)),((CHAPE,CALAN),CAPCA)),((OPHHO,CHAVO),BALRE))));
+Writing species tree
+Execution time: 34secs
+
+real	0m34.974s
+user	0m0.000s
+sys	0m0.000s
+exit=0
+### Test B2: avian, weighted (--hybrid --bootstrap --root STRCA,TINMA)
+TREE-QMC version 4.1.5
+COMMAND: D:\_Personal\Random Projects\TREE-QMC\outputs\tqmc_pre_network\build\tree-qmc.exe --hybrid --bootstrap --root STRCA,TINMA -i iq_work/avian_clean.tre -o species_tree/avian_hybrid.nwk --override 
+
+SETTINGS:
+input file: iq_work/avian_clean.tre
+output file: species_tree/avian_hybrid.nwk
+target root placement: TINMA STRCA
+weighting mode: hybrid
+support min: 0
+support max: 100
+support default: 0
+normalization for artifical taxa mode: n2
+execution mode: efficient
+random seed for refinement: 12345
+random seed for max-cut: 1
+max-cut heuristic iteration limit: 10
+
+LOGGING:
+Reading input
+Found
+    3679 trees
+    48 taxa
+    0 polytomies across all trees
+Constructing species tree
+At most 91 subproblems:
+    0 subproblems computed.
+   10 subproblems computed.
+   20 subproblems computed.
+   30 subproblems computed.
+   40 subproblems computed.
+   50 subproblems computed.
+   60 subproblems computed.
+   70 subproblems computed.
+   80 subproblems computed.
+   90 subproblems computed.
+   91 subproblems computed.
+Rooting species tree at STRCA,TINMA
+Printing output tree:
+((STRCA,TINMA),((((((((((((GEOFO,TAEGU),CORBR),MANVI),ACACH),(MELUN,NESNO)),FALPE),CARCR),(((((HALLE,HALAL),CATAU),TYTAL),((((MERNU,PICPU),BUCRH),APAVI),LEPDI)),COLST)),(((((((PYGAD,APTFO),FULGL),(((EGRGA,PELCR),NIPNI),PHACA)),GAVST),(EURHE,PHALE)),((CHAPE,CALAN),CAPCA)),((OPHHO,CHAVO),BALRE))),(((PTEGU,MESUN),COLLI),((CHLUN,TAUER),CUCCA))),(PODCR,PHORU)),((GALGA,MELGA),ANAPL)));
+Writing species tree
+Execution time: 34secs
+
+real	0m34.815s
+user	0m0.000s
+sys	0m0.000s
+exit=0

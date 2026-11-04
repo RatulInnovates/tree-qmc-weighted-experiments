@@ -1,0 +1,41 @@
+rep1 L100: simulating + estimating 100 genes
+  estimated 100 gene trees, mean gene-tree RF error 0.352
+  unweighted: species-tree RF = 0.000
+  hybrid: species-tree RF = 0.000
+rep1 L400: simulating + estimating 100 genes
+  estimated 100 gene trees, mean gene-tree RF error 0.124
+  unweighted: species-tree RF = 0.000
+  hybrid: species-tree RF = 0.000
+rep2 L100: simulating + estimating 100 genes
+  estimated 100 gene trees, mean gene-tree RF error 0.380
+  unweighted: species-tree RF = 0.077
+  hybrid: species-tree RF = 0.077
+rep2 L400: simulating + estimating 100 genes
+  estimated 100 gene trees, mean gene-tree RF error 0.188
+  unweighted: species-tree RF = 0.077
+  hybrid: species-tree RF = 0.000
+rep3 L100: simulating + estimating 100 genes
+  estimated 100 gene trees, mean gene-tree RF error 0.405
+  unweighted: species-tree RF = 0.077
+  hybrid: species-tree RF = 0.000
+rep3 L400: simulating + estimating 100 genes
+  estimated 100 gene trees, mean gene-tree RF error 0.164
+  unweighted: species-tree RF = 0.000
+  hybrid: species-tree RF = 0.000
+rep4 L100: simulating + estimating 100 genes
+  estimated 100 gene trees, mean gene-tree RF error 0.347
+  unweighted: species-tree RF = 0.000
+  hybrid: species-tree RF = 0.000
+rep4 L400: simulating + estimating 100 genes
+  estimated 100 gene trees, mean gene-tree RF error 0.135
+  unweighted: species-tree RF = 0.000
+  hybrid: species-tree RF = 0.000
+rep5 L100: simulating + estimating 100 genes
+  estimated 100 gene trees, mean gene-tree RF error 0.379
+  unweighted: species-tree RF = 0.000
+  hybrid: species-tree RF = 0.000
+rep5 L400: simulating + estimating 100 genes
+  estimated 100 gene trees, mean gene-tree RF error 0.150
+  unweighted: species-tree RF = 0.000
+  hybrid: species-tree RF = 0.000
+DONE

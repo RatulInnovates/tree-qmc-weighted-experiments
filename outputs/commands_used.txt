@@ -1,0 +1,23 @@
+# Commands in execution order (paths shortened; repo = D:\_Personal\Random Projects\TREE-QMC)
+git/ls/cat/grep (read-only)           inspect repo, README, CMakeLists, sources
+Get-Command g++,make,cmake,git,python  prerequisite check (g++/make/cmake/iqtree not found)
+python -I (zipfile)                   extract weighted_qmc_msa_demo (1).zip -> outputs/msa_input/
+python -I (validation script)         MSA checks -> msa_validation_report.md, msa_statistics.tsv
+winget install --id MSYS2.MSYS2 -e    install MSYS2 (approved)
+gh release download v3.1.4 -R iqtree/iqtree3 -p iqtree-3.1.4-Windows.zip ; unzip via python   get IQ-TREE 3
+C:\msys64\usr\bin\bash.exe -lc "pacman -Sy --noconfirm --needed mingw-w64-ucrt-x86_64-gcc make"   install compiler + make (approved)
+outputs/build.sh (UCRT64 shell): make CFLAGS="... -D_USE_MATH_DEFINES" in external/MQLib; g++ -std=c++11 -O2 ... -o tree-qmc   build (first on main: failed; see build_report.md)
+git worktree add --detach outputs/tqmc_pre_network 7e14adf^   separate older commit that builds without TOB
+outputs/build.sh (again, in worktree) successful build -> build_log.txt
+iqtree3.exe -s clean_geneN.fasta -m MFP --seed 12345 -T 1 --prefix iq_work/geneN   (N=1,2) gene trees
+cat gene1.treefile gene2.treefile > gene_trees.tre   combine
+tree-qmc.exe -h                        help text -> treeqmc_help.txt
+(Git Bash run of tree-qmc segfaulted: missing UCRT64 DLLs on PATH; diagnostic -O0 -static build, then deleted)
+outputs/run_tqmc.sh                    Test A (and failed Test B with wrong -a map)
+tr -d '\r' < avian_uce_trees_3679.tre > iq_work/avian_clean.tre   strip Windows line endings (README tip)
+outputs/run_avian.sh                   Tests B1, B2 (avian, unweighted / --hybrid --bootstrap)
+# --- Simulation study (all inside outputs/simulation) ---
+iqtree3.exe --alisim sim -m GTR{...}+F{...}+G4{0.5} -t t.tre --length 200 --seed 1 -af fasta   AliSim syntax test
+python -I run_experiment.py            species trees, MSC gene trees, AliSim (per gene: iqtree3 --alisim ... --length L), IQ-TREE (iqtree3 -s x.fa -m GTR+G4 -B 1000 --seed 1 -T 1), tree-qmc.exe -i ... -o ... --override [--hybrid --bootstrap], RF scoring -> results.tsv
+python -I analyze.py                   summary table -> results_table.md
+python -I subsample.py                 few-gene subsets -> subsample_table.md, subsample_results.tsv

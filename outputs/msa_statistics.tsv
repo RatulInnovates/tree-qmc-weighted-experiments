@@ -1,0 +1,5 @@
+file	taxa	lengths	equal_length	unique_names	gap_chars	ambiguous
+clean_gene1.fasta	6	[24]	True	True	0	0
+clean_gene2.fasta	6	[24]	True	True	0	0
+poor_gene1_demo.fasta	6	[24, 25, 26]	False	True	10	0
+poor_gene2_demo.fasta	6	[24, 25]	False	True	10	0
